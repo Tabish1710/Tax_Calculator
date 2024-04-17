@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tax Calculator</title>
+  <link href="home.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 id="heading">Tax Calculate</h1>
+  <div>
+    <input id="grossIncome" placeholder="Enter gross annual income" type="text" />
+    <span id="grossIncomeErrorIcon" class="error-icon" style="display: none;">!</span>
+    <input id="extraIncome" placeholder="Enter extra income from other source" type="text" />
+    <span id="extraIncomeErrorIcon" class="error-icon" style="display: none;">!</span>
+    <label for="age">Select age range:</label>
+    <select id="age" name="age">
+      <option value=""></option>
+      <option value="<40">&lt;40</option>
+      <option value=">=40&<60">&ge; 40 &lt; 60</option>
+      <option value=">=60">&ge; 60</option>
+    </select>
+    <input id="deductions" placeholder="Add total applicable deduction" type="text" />
+    <span id="deductionsErrorIcon" class="error-icon" style="display: none;">!</span>
+    <button onclick="calculateTax()">Submit</button>
+  </div>
+  <div id="errorTooltip" class="error-tooltip" style="display: none;"></div>
+  <div id="resultModal" style="display: none;">
+    <h2>Final Calculation</h2>
+    <div id="result"></div>
+  </div>
+  <script src="home.js"></script>
+</body>
+
+</html>
